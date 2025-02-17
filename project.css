@@ -1,0 +1,267 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.png {
+    width: 80px;  /* Standard size for logos */
+    height: 100px;  /* Maintain aspect ratio */
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 100px;
+}
+
+/* Adjust for larger screens */
+@media (min-width: 1024px) {
+    .png {
+        width: 100px; /* Slightly larger for bigger screens */
+    }
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .png {
+        width: 70px; /* Smaller for mobile */
+        margin-left: 5px;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .png {
+        width: 60px; /* Even smaller for very small screens */
+    }
+}
+
+
+/* Navigation */
+.nave {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #055b275e;
+    color: white;
+    border-radius: 8px;
+}
+
+/* Responsive Navigation */
+.nave ul {
+    display: flex;
+    gap: 10px;
+}
+
+.nave ul li {
+    list-style: none;
+}
+
+.nave ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .nave {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nave ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4cb;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    background-color: #055b275e;
+    color: white;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.1em;
+}
+
+/* Adjust Header for Smaller Screens */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+}
+
+/* Main Section */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Event Container */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Event Card */
+.event-card {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 1px 1px 5px 1px #ccc;
+    background-color: white;
+}
+
+.event-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.event-card-button {
+    background-color: rgb(236, 172, 10);
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Responsive Filter and Search */
+.filter-section,
+.search-section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .filter-section,
+    .search-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+/* Inputs and Buttons */
+select,
+input[type="text"],
+.category button {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.category button {
+    background-color: aquamarine;
+    border-radius: 5px;
+    border: none;
+}
+
+@media (max-width: 480px) {
+    select,
+    input[type="text"],
+    .category button {
+        width: 100%;
+    }
+}
+
+/* Event List */
+.event-list {
+    margin-top: 20px;
+}
+
+.event-list h2 {
+    font-size: 1.8em;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 100px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+#close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.8em;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px 0;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+/* Additional Mobile Optimizations */
+@media (max-width: 480px) {
+    .event-list h2 {
+        font-size: 1.6em;
+    }
+
+    .event-card {
+        width: 100%;
+    }
+
+    .event-card img {
+        height: 100px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
